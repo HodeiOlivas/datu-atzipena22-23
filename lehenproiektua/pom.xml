@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>dambi</groupId>
-  <artifactId>iostreams</artifactId>
+  <artifactId>lehenproiektua</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>iostreams</name>
+  <name>lehenproiektua</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
