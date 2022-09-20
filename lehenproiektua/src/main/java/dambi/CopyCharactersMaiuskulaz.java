@@ -29,7 +29,7 @@ public class CopyCharactersMaiuskulaz {
             int c;
             while ((c = inputStream.read()) != -1) {
 
-                if ( c >=96 && c>=123){
+                if ( c >=96 && c>=123){ //AZALDU DEZAKEZU IF HAU??
                     c = c-32;
                     
 
