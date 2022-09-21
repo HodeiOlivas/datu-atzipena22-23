@@ -7,7 +7,7 @@ import java.io.IOException;
 
 
 /**Programa hau,  Xanadu.txt fitxategiko testuaren karaktere bakoitzak banaka banaka irakurtzen ditu eta
- * a letra daukaten karaktereak i letrengatik aldatzen ditu.
+ * a letra daukaten karaktereak o letrengatik aldatzen ditu.
 
  */
 

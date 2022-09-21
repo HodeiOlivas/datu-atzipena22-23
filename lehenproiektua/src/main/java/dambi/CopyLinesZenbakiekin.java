@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.io.IOException;
 
 /** Programa honek proiektuaren erroan dagoen Xanadu fitxategia lineaz lineaz irakurtzen du, linea bakoitza linesZenbakiekin.txt" fitxategian idatziz.
- * Linea bakoitzaren hasieran zenbakiak jarriko ditu.
+ * Linea bakoitzaren hasieran linea zenbakiak jarriko ditu.
      */
 
 public class CopyLinesZenbakiekin {
