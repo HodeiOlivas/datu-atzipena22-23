@@ -6,10 +6,11 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.io.IOException;
 
-/** Programa honek proiektuaren erroan dagoen Xanadu fitxategia lineaz lineaz irakurtzen du, 
-    * linea bakoitza linesoutput.txt" fitxategian idatziz. */
+/** Programa honek proiektuaren erroan dagoen Xanadu fitxategia lineaz lineaz irakurtzen du, linea bakoitza linesZenbakiekin.txt" fitxategian idatziz.
+ * Linea bakoitzaren hasieran zenbakiak jarriko ditu.
+     */
 
-public class CopyLines {
+public class CopyLinesZenbakiekin {
     public static void main(String[] args) throws IOException {
 
         BufferedReader inputStream = null;
@@ -17,11 +18,16 @@ public class CopyLines {
 
         try {
             inputStream = new BufferedReader(new FileReader("./xanadu.txt"));
-            outputStream = new PrintWriter(new FileWriter("linesoutput.txt"));
+            outputStream = new PrintWriter(new FileWriter("linesZenbakiekin.txt"));
 
             String l;
+            int zenbakia =1;
             while ((l = inputStream.readLine()) != null) {
-                outputStream.println(l);
+                
+                
+               outputStream.println(zenbakia+" "+l);
+                zenbakia = zenbakia +1;
+
             }
         } finally {
             if (inputStream != null) {

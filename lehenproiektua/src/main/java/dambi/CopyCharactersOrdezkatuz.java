@@ -1,14 +1,15 @@
 package dambi;
 
-import java.io.BufferedReader;
+
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.SocketPermission;
 
-import javax.print.event.PrintEvent;
-import javax.print.event.PrintJobAdapter;
-import javax.swing.SortOrder;
+
+/**Programa hau,  Xanadu.txt fitxategiko testuaren karaktere bakoitzak banaka banaka irakurtzen ditu eta
+ * a letra daukaten karaktereak i letrengatik aldatzen ditu.
+
+ */
 
 public class CopyCharactersOrdezkatuz {
 
