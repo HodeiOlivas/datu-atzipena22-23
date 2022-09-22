@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class MainMenua {
 
@@ -50,9 +51,9 @@ public class MainMenua {
         try {
             s = new Scanner(new BufferedReader(new FileReader("Mendiak.csv")));
 
-            while (s.hasNext()) { 
-              
-                System.out.println(s.next().replace( ";", " | " )); 
+            while (s.hasNext()) {
+                System.out.println(s.next().replace(";", " | "));
+                System.out.println("-------------------------------");
             }
         } finally {
             if (s != null) {
@@ -61,9 +62,28 @@ public class MainMenua {
         }
     }
 
-    
+    public static void mendiAltuena() throws FileNotFoundException {
+       String mendiakKatea;
 
-    public static void mendiAltuena() {
+        try {
+            FileReader mendia = new FileReader("Mendiak.csv");
+            BufferedReader a = new BufferedReader(mendia);
+            int altuena = 0;
+            while ((mendiakKatea = a.readLine()) != null) {
+               // split-ek String motako array bat itzultzen du, int bihurtzeko cast bat egiten dugu
+               int[] parts = Stream.of(mendiakKatea.split(",")).mapToInt(Integer::parseInt).toArray();
+               for (int i=0;i<parts.length;i++ ) {
+                //iteramos y comparamos para obtener el mayor
+                if(altuena<parts[i]){
+                    altuena=parts[i];
+                 }
+            }
+        } finally {
+            if (s != null) {
+                BufferedReader mendia;
+                mendia.close();;
+            }
+        }
 
     }
 
