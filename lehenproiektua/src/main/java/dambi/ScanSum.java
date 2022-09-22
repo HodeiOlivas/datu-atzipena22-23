@@ -5,7 +5,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Locale;
-
+/** Programa hau udnumbers.txt fitxategiko zenbaki bakoitza hartzen du beraien harteko gehiketa eginez.  
+    */ 
 public class ScanSum {
     public static void main(String[] args) throws IOException {
 

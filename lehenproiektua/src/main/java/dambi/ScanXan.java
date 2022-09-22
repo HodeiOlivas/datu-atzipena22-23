@@ -3,7 +3,7 @@ package dambi;
 import java.io.*;
 import java.util.Scanner;
 
-/** Programa hau xanadu futxategiko hitz bakoitza hartzen du linea desberdinetan kokatuz.  
+/** Programa hau xanadu fitxategiko hitz bakoitza hartzen du linea desberdinetan kokatuz.  
     */ 
 public class ScanXan {
     public static void main(String[] args) throws IOException {
