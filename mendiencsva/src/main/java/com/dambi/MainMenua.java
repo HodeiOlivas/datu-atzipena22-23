@@ -3,9 +3,16 @@ package com.dambi;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
 import java.util.stream.Stream;
+
+import javax.xml.stream.StreamFilter;
+import javax.xml.transform.stream.StreamSource;
+
+
 
 public class MainMenua {
 
@@ -62,30 +69,100 @@ public class MainMenua {
         }
     }
 
-    public static void mendiAltuena() throws FileNotFoundException {
-       String mendiakKatea;
+    public static void mendiAltuena() throws IOException {
+
 
         try {
+            String izena = "";
+            String izenaF = "";
+            int altuera = 0;
+            int altueraF = 0;
+            String kokalekua = "";
+            String kokalekuaF = "";
+            Scanner sc = new Scanner(new FileReader("Mendiak.csv"));
+            Scanner sp;
+            sc.useDelimiter(";");
+            
+            while (sc.hasNext()) {
+                izena = sc.next();
+                try {
+                    altuera = sc.nextInt();
+                } catch (Exception e) {
+                    kokalekua = sc.next();
+                }
+                String[] parts = sc.next().split("\n");
+                kokalekua = parts[0];
+
+                izena = parts[1];
+
+                if (altuera > altueraF) {
+                    izenaF = izena;
+                    altueraF = altuera;
+                    kokalekuaF = kokalekua;
+                }
+            }
+            System.out.println(kokalekuaF + "-ko " + izenaF + " mendia da altuena, " + altueraF + "m-ko altuerarekin");
+            sc.close();
+
+        } catch (FileNotFoundException exception) {
+            System.out.println("Fitxategia ez da aurkitu");
+        }
+    }    
+      
+       
+       
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       /* 
+    String mendiakKatea
+       try {
             FileReader mendia = new FileReader("Mendiak.csv");
             BufferedReader a = new BufferedReader(mendia);
             int altuena = 0;
+          
             while ((mendiakKatea = a.readLine()) != null) {
-               // split-ek String motako array bat itzultzen du, int bihurtzeko cast bat egiten dugu
-               int[] parts = Stream.of(mendiakKatea.split(",")).mapToInt(Integer::parseInt).toArray();
-               for (int i=0;i<parts.length;i++ ) {
-                //iteramos y comparamos para obtener el mayor
-                if(altuena<parts[i]){
-                    altuena=parts[i];
-                 }
+                // split-ek String motako array bat itzultzen du, int bihurtzeko cast bat egiten
+                // dugu
+                
+                int[] parts = Stream.of(mendiakKatea.split(";")).mapToInt(Integer::parseInt).toArray();
+             
+                for (int i = 0; i < parts.length; i++) {
+               
+                    if (altuena < parts[i]) {
+                        altuena = parts[i];
+                    }
+                }
             }
         } finally {
-            if (s != null) {
+          if (mendiakKatea != null) {
                 BufferedReader mendia;
-                mendia.close();;
-            }
+                mendia.close(); 
+                
+            }*/
         }
 
-    }
+    
+
+  
+    
 
     public static void mendiakEsportatu() {
 
