@@ -73,90 +73,29 @@ public class MainMenua {
 
     public static void mendiAltuena() throws IOException {
 
-/* 
+
         try (BufferedReader s = new BufferedReader(new FileReader("Mendiak.csv"))){
             int lerroZenbakia = 0;
             String banatzailea = ";";
             String[] mendirikAltuena = null;
-            String l;
-            while ((l = s.readLine()) != null) {
-                zutabeak = l.split(banatzailea);
+            String linea;
+            while ((linea = s.readLine()) != null) {
+                zutabeak = linea.split(banatzailea);
                 if(lerroZenbakia != 0 && (mendirikAltuena == null || Integer.parseInt(mendirikAltuena[1]) < Integer.parseInt(zutabeak[1]))){
                     mendirikAltuena = zutabeak;
                 }
                 lerroZenbakia++;
             }
 
-            System.out.println("Mendirik altuena: ");
-            System.out.printf("%10s | %8s | %10s",mendirikAltuena[0],mendirikAltuena[1],mendirikAltuena[2]);
+            System.out.printf("Mendirik altuena: ");
+            System.out.printf("%10s | %3s | %8s",mendirikAltuena[0],mendirikAltuena[1],mendirikAltuena[2]);
             s.close();
         }catch(FileNotFoundException e){
             System.out.println("Ez da fitxategia aurkitu");
         }
-    
 
-
-*/
-
-
-
-
-
-
-
-      /*   Scanner s = null;
-        String mendia;
-        int kont;
-        int altuera = 0;
-        String probintzia;
-        String zakarrontzia;
-
-        try {
-            s = new Scanner(new BufferedReader(new FileReader("Mendiak.csv")));
-           
-           
-            while (s.hasNext()) {
-               // s.next().replace(";", " ");
-                
-                s.useDelimiter(";"+" ");
-                
-                mendia = s.next();
-                try{
-                 int itest = Integer.parseInt(s.next()); 
-                 kont = itest;
-             
-                if (altuera <= kont ){
-                    altuera = kont;
-                    probintzia = s.next();
-                   
-                } else {
-                   
-                   probintzia = s.next();
-                }
-              
-            } finally {
-                if (s != null) {
-                    
-                }
-         
-            }
-            System.out.println(kont);
-            System.out.println(altuera);
-
-        }   
-            
-            
-        } finally {
-            if (s != null) {
-                s.close();
-            }
-        }
     }
-
-      */
     
-    }
-
     public static void mendiakEsportatu() {
 
     }

@@ -7,8 +7,10 @@ import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
+import java.text.ParseException;
 
 import javax.sound.sampled.SourceDataLine;
+import javax.swing.plaf.metal.MetalIconFactory.FolderIcon16;
 
 
 public class JavaFilePath {
@@ -18,7 +20,10 @@ public class JavaFilePath {
 
 
     public static void main(String[] args) throws Exception {
+       
+       
         Scanner in = new Scanner(System.in);
+       
         int aukera = 0;
         do {
             System.out.println();
@@ -37,7 +42,7 @@ public class JavaFilePath {
                     existitzenda();
                     break;
                 case 2:
-                txertatuKarpetarenOsagaiak();
+                ErakutsiKarpetarenOsagaiak();
                     break;
                 
                 case 5:
@@ -71,17 +76,22 @@ public static void  existitzenda(){
         else {
             System.out.println("No exists!");
         }
-    
- 
-   
-    
 }
 
-public static void txertatuKarpetarenOsagaiak(){
- 
-
-}
-
-
-
+public static void ErakutsiKarpetarenOsagaiak(File folder){
+       
+    
+            System.out.println("Sartu nahi duzun helbidea: ");
+            Scanner in =new Scanner (System.in);
+            String helbidea = in.next();
+            for (File file : folder.listFiles()) {
+                if (!file.isDirectory()) {
+                    System.out.println(file.getName());
+                } else {
+                    ErakutsiKarpetarenOsagaiak(file);
+                }
+               folder = new File(helbidea);
+               ErakutsiKarpetarenOsagaiak(folder);
+            }              
+    }
 }
