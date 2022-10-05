@@ -29,7 +29,7 @@ public class JaxBExampleSimple
             spain.setContinent( "Europe" );
             spain.setFoundation( LocalDate.of( 1469, 10, 19 ) );
             spain.setSize(11000); 
-            
+            spain.setImportance( 1 );
             spain.setPopulation( 45000000 );
 
             /* init jaxb marshaler */

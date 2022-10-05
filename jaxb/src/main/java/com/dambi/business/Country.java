@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import com.dambi.adapter.DateAdapter;
 
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
@@ -16,7 +17,7 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  * @author dgutierrez-diez
  */
-@XmlType( propOrder = { "name", "capital", "foundation", "continent", "population", "size" } )
+@XmlType( propOrder = { "importance","name", "capital", "foundation", "continent", "population", "size"} )
 @XmlRootElement( name = "Country" )
 public class Country
 {
@@ -31,6 +32,9 @@ public class Country
     int       population;
     
     int size;
+    
+    int importance;
+    
 
     public int getPopulation()
     {
@@ -65,6 +69,8 @@ public class Country
         this.name = name;
     }
 
+   
+
     @Override
     public String toString()
     {
@@ -95,6 +101,11 @@ public class Country
     public void setCapital( String capital )
     {
         this.capital = capital;
+    }
+    @XmlAttribute( name = "importance", required = true )
+    public void setImportance( int importance )
+    {
+        this.importance = importance;
     }
 
     public LocalDate getFoundation()
