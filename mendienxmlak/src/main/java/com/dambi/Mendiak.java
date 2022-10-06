@@ -2,8 +2,6 @@ package com.dambi;
 
 import java.time.LocalDate;
 
-import com.dambi.adapter.DateAdapter;
-
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
