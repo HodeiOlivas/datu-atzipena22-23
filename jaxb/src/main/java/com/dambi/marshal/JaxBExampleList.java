@@ -30,14 +30,14 @@ public class JaxBExampleList
             spain.setName( "Spain" );
             spain.setCapital( "Madrid" );
             spain.setContinent( "Europe" );
-            
+            spain.setImportance( 1 );
             spain.setFoundation( LocalDate.of( 1469, 10, 19 ) );
 
             Country usa = new Country();
             usa.setName( "USA" );
             usa.setCapital( "Washington" );
             usa.setContinent( "America" );
-
+            usa.setImportance( 0);
 
             usa.setFoundation( LocalDate.of( 1776, 7, 4 ) );
 

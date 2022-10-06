@@ -24,12 +24,12 @@ public class JaxBExampleSimple
 
             /* init very simple data to marshal */
             Country spain = new Country();
+            spain.setImportance( 1 );
             spain.setName( "Spain" );
             spain.setCapital( "Madrid" );
             spain.setContinent( "Europe" );
             spain.setFoundation( LocalDate.of( 1469, 10, 19 ) );
             spain.setSize(11000); 
-            spain.setImportance( 1 );
             spain.setPopulation( 45000000 );
 
             /* init jaxb marshaler */

@@ -1,4 +1,4 @@
-package com.dambi.business;
+package com.dambi;
 
 import java.time.LocalDate;
 
